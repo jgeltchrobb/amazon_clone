@@ -1,0 +1,10 @@
+<h1>Books</h1>
+
+<% @books.each do |book| %>
+  <%= link_to (image_tag(book.image, options = { height: '150px' })), book %>
+  <br>
+  <%= link_to book.name, book %> |
+  <%= link_to "Edit", edit_book_path(book) %>
+  
+  <hr>
+<% end %>

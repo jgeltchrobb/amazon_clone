@@ -1,0 +1,13 @@
+<h1>Authors</h1>
+
+<% @authors.each do |author| %>
+  <%= image_tag(author.image, options = { height: '150px' }) %>
+  <p><%= author.name %></p>
+
+  <ul>
+  <% author.books.each do |book| %>
+    <li><%= book.name %></li>
+  <% end %>
+  </ul>
+  <hr>
+<% end %>
